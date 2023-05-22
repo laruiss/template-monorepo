@@ -1,0 +1,28 @@
+{
+  "name": "dummy",
+  "version": "1.0.0",
+  "description": "Gabarit d’application fullstack JS/TS pour la fabrique numérique",
+  "scripts": {
+    "build": "turbo build",
+    "test": "turbo test",
+    "dev": "turbo dev",
+    "start": "turbo start --filter=server",
+    "prepare": "$CI || husky install",
+    "lint": "turbo lint",
+    "build:client": "turbo build --filter=client",
+    "lint:client": "turbo lint --filter=client",
+    "test:client": "turbo test --filter=client",
+    "build:server": "turbo build --filter=server",
+    "lint:server": "turbo lint --filter=server",
+    "test:server": "turbo test --filter=server",
+    "test:only": "turbo test",
+    "test:e2e": "turbo test:e2e --filter=client",
+    "test:e2e:ci": "turbo test:e2e:ci"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "turbo": "^1.9.8"
+  }
+}
