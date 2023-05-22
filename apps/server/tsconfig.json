@@ -1,0 +1,7 @@
+{
+  "extends":["@dummy/tsconfig/nextjs.json"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist"
+  }
+}
