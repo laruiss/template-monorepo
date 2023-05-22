@@ -1,0 +1,9 @@
+{
+  "name": "@dummy/eslint-config-custom",
+  "version": "1.0.0",
+  "description": "Configuration partagée de eslint",
+  "author": "",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js"
+}

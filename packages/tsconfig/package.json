@@ -1,0 +1,9 @@
+{
+  "name": "@dummy/tsconfig",
+  "version": "1.0.0",
+  "description": "Configuration partagée de typescript",
+  "author": "",
+  "keywords": [],
+  "license": "ISC",
+  "main": "base.json"
+}

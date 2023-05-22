@@ -8,6 +8,10 @@ importers:
         specifier: ^1.9.8
         version: 1.9.8
 
+  packages/eslint-config-custom: {}
+
+  packages/tsconfig: {}
+
 packages:
 
   /turbo-darwin-64@1.9.8:
