@@ -1,8 +1,8 @@
+require('@rushstack/eslint-patch/modern-module-resolution')
+
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: 'tsconfig.json',
-    tsconfigRootDir: __dirname,
     sourceType: 'module',
   },
   plugins: [
@@ -23,10 +23,11 @@ module.exports = {
   },
   ignorePatterns: ['.eslintrc.js'],
   rules: {
-    '@typescript-eslint/interface-name-prefix': 'off', //
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'comma-dangle': ['error', 'always-multiline'],
+    'comma-dangle': ['error', 'always-multiline'], //
+    '@typescript-eslint/ban-ts-comment': [
+      'error',
+      { 'ts-ignore': 'allow-with-description' },
+    ],
   },
   overrides: [
     {

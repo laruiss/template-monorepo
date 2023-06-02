@@ -1,7 +1,7 @@
-import {describe, expect, it} from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { isLongerThan } from './string-utils'
 
-describe('String utils', () => { 
+describe('String utils', () => {
   describe('isLongerThan', () => {
     it('should return true', () => {
       const expected = true
@@ -10,4 +10,4 @@ describe('String utils', () => {
       expect(actual).toBe(expected)
     })
   })
- })
+})
