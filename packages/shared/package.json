@@ -1,0 +1,31 @@
+{
+  "name": "@dummy/shared",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "keywords": [],
+  "license": "ISC",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "run-s clean:dist build:only",
+    "build:only": "tsc",
+    "clean:dist": "rimraf dist types",
+    "dev": "nodemon --watch src --exec 'pnpm run build'",
+    "format": "eslint src/ --ext .ts --ignore-path ../../.gitignore --fix",
+    "lint": "eslint src/ --ext .ts --ignore-path ../../.gitignore",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "types": "./types",
+  "devDependencies": {
+    "@dummy/eslint-config-custom": "workspace:^",
+    "@dummy/tsconfig": "workspace:^",
+    "@nestjs/swagger": "^6.3.0",
+    "class-validator": "^0.14.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.4"
+  }
+}

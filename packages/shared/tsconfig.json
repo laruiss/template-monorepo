@@ -1,0 +1,10 @@
+{
+  "extends": ["@dummy/tsconfig/base.json"],  
+  "include": ["src/**/*.ts"],
+  "compilerOptions": {
+    "declarationDir": "./types",
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "preserveSymlinks": true
+  }
+}
