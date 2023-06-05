@@ -1,8 +1,23 @@
-import { NestFactory } from '@nestjs/core'
+import { HttpAdapterHost, NestFactory } from '@nestjs/core'
 import { AppModule } from './app.module'
+import { ValidationPipe } from '@nestjs/common'
+import { ConfigService } from '@nestjs/config'
+import { AllExceptionsFilter } from '@/shared/filters/all-exceptions.filter'
+import { LoggerService } from '@/modules/logger/logger.service'
 
 async function bootstrap () {
   const app = await NestFactory.create(AppModule)
-  await app.listen(3000)
+  const configService = app.get(ConfigService)
+  const loggerService = app.get(LoggerService)
+  const httpAdapterHost = app.get(HttpAdapterHost)
+
+  app.useLogger(app.get(LoggerService))
+  app.setGlobalPrefix('/api')
+  app.useGlobalPipes(new ValidationPipe())
+  app.useGlobalFilters(new AllExceptionsFilter(httpAdapterHost, loggerService))
+
+  await app.listen(configService.get('port') ?? 3001)
 }
+
+// eslint-disable-next-line @typescript-eslint/no-floating-promises
 bootstrap()

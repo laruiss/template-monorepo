@@ -1,4 +1,4 @@
-@baseUrl = http://localhost:3000
+@baseUrl = http://localhost:3001
 
 ###
 {{baseUrl}}
@@ -19,13 +19,13 @@ Content-Type: application/json
 
 {
   "title": "Conventions",
-  "description": "Ensemble des conventions (fortement) recommandées pour les projets du Mininstère de l’Intérieur",
+  "description": "Ensemble des conventions (fortement) recommandées pour les projets du Ministère de l’Intérieur",
   "tags": ["conventions", "javascript", "typescript"],
   "content": "Lorem ipsum dolor sit amet, consectetur"
 }
 
 ###
-PATCH  {{baseUrl}}/coffees/1 HTTP/1.1
+PATCH  {{baseUrl}}/docs/1 HTTP/1.1
 Content-Type: application/json
 
 {

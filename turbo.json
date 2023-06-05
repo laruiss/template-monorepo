@@ -23,9 +23,11 @@
     "dev": {
       "cache": false,
       "dependsOn": [
+        "^@dummy/server#dev:db",
         "^@dummy/shared#build"
       ]
     },
+    "dev:db": {},
     "lint": {},
     "preview": {
       "dependsOn": [
