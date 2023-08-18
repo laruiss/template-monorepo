@@ -1,0 +1,27 @@
+{
+  "name": "@dummy/shared",
+  "version": "1.0.0",
+  "description": "Code partagé entre le back (api) et le front (client)",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint .",
+    "lint:staged": "eslint"
+  },
+  "keywords": [
+    "shared",
+    "dummy"
+  ],
+  "author": "Stanislas Ormières <stan@stormier.ninja>",
+  "license": "ISC",
+  "devDependencies": {
+    "@dummy/eslint-config-custom": "workspace:*",
+    "eslint": "^8.47.0",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "lint-staged": "^14.0.1"
+  },
+  "volta": {
+    "node": "20.8.0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@dummy/api",
+  "version": "1.0.0",
+  "description": "API RESTful pour l’application dummy",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:staged": "eslint"
+  },
+  "keywords": [
+    "API",
+    "REST",
+    "fastify"
+  ],
+  "author": "Stanislas Ormières <stan@stormier.ninja>",
+  "license": "ISC",
+  "devDependencies": {
+    "@dummy/eslint-config-custom": "workspace:*",
+    "@types/node": "^20.8.2",
+    "lint-staged": "^14.0.1"
+  },
+  "dependencies": {
+    "fastify": "^4.23.2"
+  },
+  "volta": {
+    "node": "20.8.0"
+  }
+}
