@@ -1,0 +1,21 @@
+name: Release Please
+
+on:
+  push:
+    branches:
+      - beta
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Release new version
+        uses: google-github-actions/release-please-action@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
+          default-branch: dev
+          command: github-release
+          prerelease: true
