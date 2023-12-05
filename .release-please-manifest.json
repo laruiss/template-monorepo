@@ -6,5 +6,6 @@
     "@dummy/shared": {
       "path": "packages/shared"
     }
-  }
+  },
+  ".": "1.0.0"
 }
