@@ -2,6 +2,7 @@
   "name": "dummy",
   "version": "1.0.0",
   "description": "Gabarit d’application fullstack JS/TS pour la fabrique numérique",
+  "packageManager": "pnpm@8.9.2",
   "scripts": {
     "build": "turbo build",
     "test": "turbo test",
