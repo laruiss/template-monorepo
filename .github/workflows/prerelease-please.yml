@@ -19,9 +19,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
-          command: github-release
-          prerelease: true
           target-branch: beta
+          config-file: .prerelease-please-config.json
       - name: Checkout repository
         uses: actions/checkout@v4
         if: ${{ steps.release.outputs.release_created }}

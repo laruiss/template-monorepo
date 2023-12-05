@@ -1,0 +1,12 @@
+{
+  "prerelease-type": "beta",
+  "prerelease": true,
+  "packages": {
+    "@dummy/api": {
+      "path": "apps/api"
+    },
+    "@dummy/shared": {
+      "path": "packages/shared"
+    }
+  }
+}
