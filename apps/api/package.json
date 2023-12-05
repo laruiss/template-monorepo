@@ -25,6 +25,7 @@
     "prisma": "^5.2.0"
   },
   "devDependencies": {
+    "@dummy/shared": "workspace:*",
     "@dummy/eslint-config-custom": "workspace:*",
     "@types/node": "^20.6.0",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
