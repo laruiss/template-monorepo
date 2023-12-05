@@ -9,6 +9,7 @@
     "start": "turbo start --filter=server",
     "prepare": "$CI || husky install",
     "lint": "turbo lint",
+    "lint:staged": "turbo lint:staged",
     "build:client": "turbo build --filter=client",
     "lint:client": "turbo lint --filter=client",
     "test:client": "turbo test --filter=client",
