@@ -26,15 +26,19 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v4
         with:
-          node-version: 12
+          node-version: 20
           registry-url: 'https://registry.npmjs.org'
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm ci
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm build
+      - run: pnpm install --frozen-lockfile
+        if: ${{ steps.release.outputs.release_created }}
+      - run: pnpm run build
         if: ${{ steps.release.outputs.release_created }}
       - name: Upload Release Artifact
         if: ${{ steps.release.outputs.release_created }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload ${{ steps.release.outputs.tag_name }} ./packages/shared/package.json ./packages/shared/dist ./packages/types
+  

@@ -26,8 +26,11 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v4
         with:
-          node-version: 12
+          node-version: 20
           registry-url: 'https://registry.npmjs.org'
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
         if: ${{ steps.release.outputs.release_created }}
       - run: pnpm install --frozen-lockfile
         if: ${{ steps.release.outputs.release_created }}
