@@ -29,9 +29,9 @@ jobs:
           node-version: 12
           registry-url: 'https://registry.npmjs.org'
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm build
+      - run: pnpm run build
         if: ${{ steps.release.outputs.release_created }}
       - name: Upload Release Artifact
         if: ${{ steps.release.outputs.release_created }}
