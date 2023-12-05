@@ -1,0 +1,10 @@
+{
+  "packages": {
+    "@dummy/api": {
+      "path": "apps/api"
+    },
+    "@dummy/shared": {
+      "path": "packages/shared"
+    }
+  }
+}
