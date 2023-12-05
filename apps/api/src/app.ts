@@ -1,5 +1,7 @@
 import Fastify from 'fastify'
 
+import { handleErrors } from './error-handler'
+
 function createApp() {
   const fastify = Fastify({
     logger: true,
@@ -14,6 +16,8 @@ function createApp() {
     },
     { prefix: '/api' },
   )
+
+  handleErrors(fastify)
 
   return fastify
 }
