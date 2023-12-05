@@ -1,0 +1,20 @@
+{
+  "name": "@dummy/shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "types": "./types",
+  "scripts": {
+    "prisma:gen": "prisma generate",
+    "lint:staged": "echo TODO",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@prisma/client": "^5.6.0",
+    "prisma": "^5.6.0",
+    "typescript": "^5.2.2"
+  }
+}
