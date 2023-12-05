@@ -1,6 +1,6 @@
 {
   "name": "dummy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gabarit d’application fullstack JS/TS pour la fabrique numérique",
   "scripts": {
     "build": "turbo build",

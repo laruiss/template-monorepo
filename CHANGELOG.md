@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/laruiss/template-monorepo/compare/v1.0.0...v1.0.1) (2023-12-05)
+
+
+### Bug Fixes
+
+* :construction_worker: use pnpm in GHA ([50b1164](https://github.com/laruiss/template-monorepo/commit/50b11648790603423165aa6a11b3e9af0aac3859))
+
 ## 1.0.0 (2023-12-05)
 
 
