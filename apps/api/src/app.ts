@@ -9,12 +9,15 @@ function createApp() {
 
   fastify.register(
     (instance, opts, done) => {
-      instance.get('/version', async function handler(/* request, reply */) {
+      instance.get('/version', async (/* request, reply */) => {
         return { version: '1.0.0' }
+      })
+      instance.get('/me', async (/* request, reply */) => {
+        return { id: 1, username: 'jbond', email: 'james.bond@mi6.gov.uk', createAt: new Date('2023'), updatedAt: new Date() }
       })
       done()
     },
-    { prefix: '/api' },
+    { prefix: '/api/v1' },
   )
 
   handleErrors(fastify)

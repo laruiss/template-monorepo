@@ -1,9 +1,11 @@
 {
   "name": "@dummy/api",
+  "type": "module",
   "version": "1.0.0",
   "description": "API de l’application dummy",
+  "author": "",
+  "license": "ISC",
   "main": "src/index.js",
-  "type": "module",
   "scripts": {
     "clean:dist": "rimraf dist",
     "test": "vitest",
@@ -13,11 +15,9 @@
     "build:only": "tspc || exit 0",
     "db:generate": "prisma generate",
     "build": "run-s clean:dist build:only",
-    "lint": "eslint --ext .ts . --ignore-path .gitignore",
-    "lint:staged": "eslint --ext .ts --ignore-path .gitignore"
+    "lint": "eslint .",
+    "lint:staged": "eslint"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.2.0",
     "fastify": "^4.23.0",
@@ -25,10 +25,11 @@
     "prisma": "^5.2.0"
   },
   "devDependencies": {
-    "@dummy/shared": "workspace:*",
     "@dummy/eslint-config-custom": "workspace:*",
+    "@dummy/shared": "workspace:*",
     "@types/node": "^20.6.0",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "dotenv": "^16.3.2",
     "eslint-plugin-cypress": "^2.14.0",
     "eslint-plugin-prettier": "^5.0.0",
     "nodemon": "^3.0.1",

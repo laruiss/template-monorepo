@@ -1,5 +1,7 @@
-import { createApp } from './app.js'
+import process from 'node:process'
+
 import config from './config.js'
+import { createApp } from './app.js'
 import { connectToPostgres } from './connect.js'
 
 start()
@@ -10,7 +12,8 @@ async function start() {
   try {
     await connectToPostgres(fastify)
     await fastify.listen({ port: config.port })
-  } catch (err) {
+  }
+  catch (err) {
     fastify.log.error(err)
     process.exit(1)
   }

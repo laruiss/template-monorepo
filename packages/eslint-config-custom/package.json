@@ -1,13 +1,14 @@
 {
   "name": "@dummy/eslint-config-custom",
+  "type": "module",
   "version": "1.0.0",
   "description": "Configuration partagée de eslint",
-  "type": "commonjs",
   "author": "",
-  "keywords": [],
   "license": "ISC",
-  "main": "index.js",
+  "keywords": [],
+  "main": "flat-config.js",
   "devDependencies": {
+    "@antfu/eslint-config": "^2.6.3",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
     "@vue/eslint-config-typescript": "^11.0.3",
@@ -19,6 +20,8 @@
     "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.17.0",
+    "i": "^0.3.7",
+    "pnpm": "^8.14.2",
     "prettier": "^3.0.2"
   }
 }

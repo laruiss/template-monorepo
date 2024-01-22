@@ -1,20 +1,30 @@
 {
   "name": "@dummy/shared",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "types": "./types",
-  "scripts": {
-    "prisma:gen": "prisma generate",
-    "lint:staged": "echo TODO",
-    "build": "tsc"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
+  "keywords": [],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'tsc'",
+    "prisma:gen": "prisma generate",
+    "lint:staged": "echo TODO",
+    "clean:build": "rimraf dist types",
+    "build": "run-s clean:build build:only",
+    "build:only": "tsc",
+    "postinstall": "run-s prisma:gen"
+  },
   "devDependencies": {
+    "@dummy/eslint-config-custom": "workspace:*",
     "@prisma/client": "^5.6.0",
+    "nodemon": "^3.0.1",
+    "npm-run-all2": "^6.1.1",
     "prisma": "^5.6.0",
+    "rimraf": "^5.0.1",
     "typescript": "^5.2.2"
   }
 }

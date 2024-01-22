@@ -1,3 +1,8 @@
+import process from 'node:process'
+import dotenv from 'dotenv'
+
+dotenv.config()
+
 const port = +(process.env.PORT || 4500)
 const dbHost = process.env.DB_HOST
 const dbUser = process.env.DB_USER
